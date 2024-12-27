@@ -1,0 +1,43 @@
+head -1 load_full_20190101_20241003.csv > load_1_hr_2019.csv 
+head -1 load_full_20190101_20241003.csv > load_1_hr_2020.csv 
+head -1 load_full_20190101_20241003.csv > load_1_hr_2021.csv 
+head -1 load_full_20190101_20241003.csv > load_1_hr_2022.csv 
+head -1 load_full_20190101_20241003.csv > load_1_hr_2023.csv 
+head -1 load_full_20190101_20241003.csv > load_1_hr_2024.csv 
+
+
+#egrep '2019-' load_full_20190101_20241003.csv >> load_1_hr_2019.csv
+#egrep '2020-' load_full_20190101_20241003.csv >> load_1_hr_2020.csv
+#egrep '2021-' load_full_20190101_20241003.csv >> load_1_hr_2021.csv
+#egrep '2022-' load_full_20190101_20241003.csv >> load_1_hr_2022.csv
+#egrep '2023-' load_full_20190101_20241003.csv >> load_1_hr_2023.csv
+#egrep '2024-' load_full_20190101_20241003.csv >> load_1_hr_2024.csv
+
+
+
+egrep '2019-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2019.csv
+egrep '2020-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2020.csv
+egrep '2021-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2021.csv
+egrep '2022-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2022.csv
+egrep '2023-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2023.csv
+egrep '2024-' load_full_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> load_1_hr_2024.csv
+
+
+
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2019.csv
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2020.csv
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2021.csv
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2022.csv
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2023.csv
+head -1 fuel_mix_20190101_20241003.csv > fuel_mix_1_hr_2024.csv
+
+
+egrep '2019-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2019.csv
+egrep '2020-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2020.csv
+egrep '2021-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2021.csv
+egrep '2022-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2022.csv
+egrep '2023-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2023.csv
+egrep '2024-' fuel_mix_20190101_20241003.csv | egrep '00\:00\-0' | egrep -v '55\:00\-0' >> fuel_mix_1_hr_2024.csv
+
+
+
