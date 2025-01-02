@@ -2,7 +2,37 @@
 
 
 
-Overview of the files in this project: 
+SUMMARY 
+
+This is the UCB AIML Capstone Project for Mike Jones.
+
+The overall aim of the project is to use data from the CAISO Electrical Energy Markets 
+in order to do short term forecasts for two timeseries: 
+
+    [1] the total electrical power production / consumtion in the system, as well as
+    [2] the duck curve, which is side effect of increased use of solar and wind power.
+
+The data is obtained from an API source for roughly six years of data that has been
+refined and reduced to one record per hour of the two data sets: total laod and fuel 
+mix, which are used in combination to compute The Duck Curve. 
+
+The timeseries for Total Load and Duck Curve are analysed by first seperating out the
+trend, seasonality and residue by using Seasonal Decomposition.
+Then the trends are further analyzed by feeding them into the ARIMA model to produce
+7-day forecasts. In order to determine which forecasts are more accurate, several 
+ARIMA hyperparameters are tested in a manner similar to Grid Search and Cross Validation.
+In the end the SARIMAX method is also used to produce forecasts for both Total Load and
+Duck Curve. 
+
+An accompanying paper describes all of this in more detail, along with a report in
+excel and other images produced during the research.
+
+
+
+DETAILS 
+
+
+The following table gives an overview of the files in this project. 
 ```
 
 NUM  FILE / DIRECTORY                           DESCRIPTION
@@ -25,15 +55,14 @@ NUM  FILE / DIRECTORY                           DESCRIPTION
 
 ```
 
-Suggested order to get started: 
+The suggested order for getting started is to:
 
-Begin by looking at the 1 Readme file to get oriented. 
-
-Read through the files 2 Final Report and 3 Final Result Data.
-
-Read through and run the 4 Jupyter Notebook, look at the output in 14.
-
-Read through other ancillary files to see details of data preparation and etc.
+   [A] Begin by looking at [1] this Readme file to get oriented. 
+   [B] Read through the files [2] Final Report and [3] Final Result Data.
+   [C] Read through and run the [4] Jupyter Notebook. 
+   [D] Look at the generated output in [14] _out directory.
+   [E] Look at the previously generated output in [15] _out_bak_2024_12_26.
+   [F] Read through other ancillary files to see details of data preparation and etc.
 
 
 
